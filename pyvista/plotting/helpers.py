@@ -239,8 +239,9 @@ def plot_compare_four(data_a, data_b, data_c, data_d, disply_kwargs=None,
     return p.show(screenshot=screenshot, **show_kwargs)
 
 
-def plot_itk(mesh: Union['pyvista.Common', 'pyvista.MultiBlock'], color: Color,
-             scalars: Optional[Union[str, np.ndarray]]=None, opacity: Optional[float]=1.0,
+def plot_itk(mesh: Union['pyvista.Common', 'pyvista.MultiBlock'],
+             color: Optional[Color]=None, scalars: Optional[Union[str, np.ndarray]]=None,
+             opacity: Optional[float]=1.0,
              smooth_shading: bool=False) -> itkwidgets.Viewer:
     """Plot a PyVista/VTK mesh or dataset.
 
