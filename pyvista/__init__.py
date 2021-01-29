@@ -88,7 +88,7 @@ except Exception as e:
     warnings.warn(f'Unable to create `EXAMPLES_PATH` at "{EXAMPLES_PATH}"\nError: {e}\n\n'
                   'Override the default path by setting the environmental variable '
                   '`PYVISTA_USERDATA_PATH` to a writable path.')
-    EXAMPLES_PATH = None
+    EXAMPLES_PATH = ''
 
 # Send VTK messages to the logging module:
 send_errors_to_logging()

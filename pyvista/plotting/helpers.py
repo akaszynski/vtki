@@ -15,13 +15,24 @@ from ..typing import NumericArray, Color
 
 
 # TODO, type hints, undocumented parameters: interactive, background, return_image, parallel_projection
-def plot(var_item: [vtk.vtkObject, np.ndarray], off_screen: Optional[bool]=None,
-         full_screen: bool=False, screenshot: Optional[Union[str, bool]]=None,
-         interactive: bool=True, cpos: Optional[List]=None, window_size: Optional[List]=None,
-         show_bounds: bool=False, show_axes: bool=True, notebook: Optional[bool]=None,
-         background=None, text: str='', return_img: bool=False, eye_dome_lighting: bool=False,
-         volume: bool=False, parallel_projection=False,
-         use_ipyvtk: Optional[bool]=None, **kwargs) -> NumericArray:
+def plot(var_item: Union[vtk.vtkObject, np.ndarray],
+         off_screen: Optional[bool]=None,
+         full_screen: bool=False,
+         screenshot: Optional[Union[str, bool]]=None,
+         interactive: bool=True,
+         cpos: Optional[List]=None,
+         window_size: Optional[List]=None,
+         show_bounds: bool=False,
+         show_axes: bool=True,
+         notebook: Optional[bool]=None,
+         background=None,
+         text: str='',
+         return_img: bool=False,
+         eye_dome_lighting: bool=False,
+         volume: bool=False,
+         parallel_projection=False,
+         use_ipyvtk: Optional[bool]=None,
+         **kwargs) -> NumericArray:
     """Plot a vtk or numpy object.
 
     Parameters
